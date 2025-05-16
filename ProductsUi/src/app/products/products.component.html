@@ -1,0 +1,12 @@
+    <div class="container mt-5">
+      <div class="input-group mb-3">
+        <input [(ngModel)]="name" placeholder="Product Name" class="form-control">
+        <button (click)="addProduct()" class="btn btn-primary">Add</button>
+      </div>
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let p of products">
+          {{ p.name }}
+        </li>
+      </ul>
+    </div>

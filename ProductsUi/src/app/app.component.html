@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Hanzala's Store</a>
+    <button class="btn btn-outline-light ms-auto" *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <app-login *ngIf="!isLoggedIn" (loginSuccess)="onLogin()"></app-login>
+  <app-products *ngIf="isLoggedIn"></app-products>
+</div>
+
+<footer class="bg-dark text-white text-center py-3 fixed-bottom">
+  © Hanzala Jaffer 2025
+</footer>

@@ -1,0 +1,22 @@
+# .gitignore
+# Node
+node_modules/
+dist/
+.angular/
+.env
+
+
+# VSCode
+.vscode/
+
+# Dotnet
+**/bin/
+**/obj/
+*.user
+*.suo
+*.csproj.user
+
+# Logs
+*.log
+
+.DS_Store
