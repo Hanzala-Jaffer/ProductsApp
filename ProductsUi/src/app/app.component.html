@@ -6,8 +6,15 @@
 </nav>
 
 <div class="container mt-4">
-  <app-login *ngIf="!isLoggedIn" (loginSuccess)="onLogin()"></app-login>
-  <app-products *ngIf="isLoggedIn"></app-products>
+  <div class="row">
+    <div class="col-md-3" *ngIf="isLoggedIn">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9">
+      <app-products *ngIf="isLoggedIn"></app-products>
+    </div>
+    <app-login *ngIf="!isLoggedIn" (loginSuccess)="onLogin()"></app-login>
+  </div>
 </div>
 
 <footer class="bg-dark text-white text-center py-3 fixed-bottom">

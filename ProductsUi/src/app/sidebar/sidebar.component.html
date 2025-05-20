@@ -1,0 +1,9 @@
+<div class="bg-light p-3 border rounded">
+    <h5>Categories</h5>
+    <ul class="list-group">
+        <li *ngFor="let c of categoryKeys" class="list-group-item d-flex justify-content-between">
+            {{ c }}
+            <span class="badge bg-primary">{{ categoryCounts[c] }}</span>
+        </li>
+    </ul>
+</div>
